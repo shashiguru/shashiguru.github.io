@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shashiguru Keluth — Lead Applied AI Specialist</title>
+  <meta name="description" content="Portfolio of Shashiguru Keluth, Lead Applied AI Specialist and Full Stack / AI Engineer in Singapore. Agentic AI, GenAI orchestration, MCP platforms, RAG and cloud-native Azure." />
+  <meta name="author" content="Shashiguru Keluth" />
+  <meta name="theme-color" content="#05060d" />
+  <link rel="canonical" href="https://shashiguru.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shashiguru Keluth — Lead Applied AI Specialist" />
+  <meta property="og:description" content="Agentic AI, GenAI orchestration, MCP platforms, RAG and full-stack engineering on Azure." />
+  <meta property="og:url" content="https://shashiguru.github.io/" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <p class="loader__text">Initialising neural graph</p>
+  </div>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" aria-label="Shashiguru Keluth, back to top">
+      <span class="nav__logo">SK</span>
+      <span class="nav__name">Shashiguru</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about" data-link="about">About</a>
+      <a href="#projects" data-link="projects">Platforms</a>
+      <a href="#skills" data-link="skills">Skills</a>
+      <a href="#experience" data-link="experience">Experience</a>
+      <a href="#credentials" data-link="credentials">Credentials</a>
+      <a href="#contact" class="nav__cta" data-link="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero" id="hero" data-palette="0">
+      <div class="container hero__inner">
+        <p class="eyebrow" data-hero="fade"><span class="dot"></span> Singapore · Applied AI · Full Stack</p>
+        <h1 class="hero__title" aria-label="Shashiguru Keluth">
+          <span class="line" data-split>Shashiguru</span>
+          <span class="line" data-split data-gradient>Keluth</span>
+        </h1>
+        <h2 class="hero__role" data-hero="fade">Lead Applied AI Specialist</h2>
+        <p class="hero__typed" data-hero="fade">
+          I build <span class="typed" id="typed" aria-live="polite">agentic AI systems</span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero__lede" data-hero="fade">
+          8+ years shipping production GenAI platforms, multi-agent systems, MCP tool infrastructure, RAG pipelines and cloud-native React applications for renewable-energy and enterprise productivity use cases.
+        </p>
+        <div class="hero__cta" data-hero="fade">
+          <a class="btn btn--primary magnetic" href="#projects">View my work</a>
+          <a class="btn btn--ghost magnetic" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Google ADK</span><span>CrewAI</span><span>AutoGen</span><span>FastMCP</span><span>LiteLLM</span><span>Azure OpenAI</span><span>Claude</span><span>Gemini</span><span>RAG</span><span>FastAPI</span><span>gRPC</span><span>Next.js</span><span>TypeScript</span><span>AKS</span><span>OpenTelemetry</span>
+        <span>Google ADK</span><span>CrewAI</span><span>AutoGen</span><span>FastMCP</span><span>LiteLLM</span><span>Azure OpenAI</span><span>Claude</span><span>Gemini</span><span>RAG</span><span>FastAPI</span><span>gRPC</span><span>Next.js</span><span>TypeScript</span><span>AKS</span><span>OpenTelemetry</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" data-palette="1">
+      <div class="container">
+        <p class="section__tag" data-reveal>01 / About</p>
+        <h2 class="section__title" data-reveal>Turning frontier AI into <span class="gradient-text">reliable production systems</span>.</h2>
+
+        <div class="about">
+          <div class="about__text">
+            <p data-reveal>
+              I'm a Lead Applied AI Specialist and Full Stack / AI Engineer with strong hands-on coverage across the modern AI stack: LLM orchestration, agentic workflows, model routing, enterprise search, deterministic guardrails, secure data access, and Azure / Kubernetes deployment.
+            </p>
+            <p data-reveal>
+              My delivery spans renewable energy and enterprise productivity, from natural-language access to operational data to multi-agent assistants that stream answers, charts, citations and tool-call progress in real time.
+            </p>
+            <div class="callout glass" data-reveal>
+              <span class="callout__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+              </span>
+              <p><strong>3 hackathons won.</strong> Regular participant in AI hackathons across the OpenAI, Claude, Gemini and Cursor ecosystems, building practical GenAI and agentic solutions.</p>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat glass" data-reveal>
+              <span class="stat__num"><span data-count="8" data-suffix="+">0</span></span>
+              <span class="stat__label">Years of experience</span>
+            </div>
+            <div class="stat glass" data-reveal>
+              <span class="stat__num"><span data-count="3">0</span></span>
+              <span class="stat__label">Hackathons won</span>
+            </div>
+            <div class="stat glass" data-reveal>
+              <span class="stat__num"><span data-count="16" data-suffix="+">0</span></span>
+              <span class="stat__label">Specialist agents in one orchestrator</span>
+            </div>
+            <div class="stat glass" data-reveal>
+              <span class="stat__num"><span data-count="400" data-prefix="~">0</span></span>
+              <span class="stat__label">LLM-callable MCP tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" data-palette="2">
+      <div class="container">
+        <p class="section__tag" data-reveal>02 / Representative AI platforms</p>
+        <h2 class="section__title" data-reveal>Platforms I've <span class="gradient-text">designed and shipped</span>.</h2>
+
+        <div class="cards">
+          <article class="card card--wide glass tilt" data-reveal>
+            <div class="card__glow"></div>
+            <span class="card__num">01</span>
+            <h3>René Enterprise GenAI Orchestrator</h3>
+            <p>A streaming multi-agent assistant with 16+ specialist agents, RAG, SQL/data tools, source citations, gRPC APIs, and MCP-based tool microservices.</p>
+            <ul class="chips">
+              <li>Multi-agent</li><li>RAG</li><li>gRPC streaming</li><li>MCP</li><li>Citations</li>
+            </ul>
+          </article>
+
+          <article class="card glass tilt" data-reveal>
+            <div class="card__glow"></div>
+            <span class="card__num">02</span>
+            <h3>ReneX Solar Portfolio Intelligence</h3>
+            <p>An agentic AI platform for ~332 solar sub-sites: forecasting P10/P50/P90 generation, detecting LD exposure 6–12 months ahead, and recommending auditable recovery actions using deterministic RPN + CBA logic.</p>
+            <ul class="chips">
+              <li>Forecasting</li><li>Deterministic logic</li><li>Auditable</li>
+            </ul>
+          </article>
+
+          <article class="card glass tilt" data-reveal>
+            <div class="card__glow"></div>
+            <span class="card__num">03</span>
+            <h3>NetZeroOS MCP Platform</h3>
+            <p>18 FastMCP domain servers exposing ~400 LLM-callable tools across KQL, PostgreSQL, Synapse, AI Search and external APIs, with Entra/JWT security, semantic catalogs, query guardrails and AKS deployment.</p>
+            <ul class="chips">
+              <li>FastMCP</li><li>Entra ID / JWT</li><li>AKS</li><li>Guardrails</li>
+            </ul>
+          </article>
+
+          <article class="card glass tilt" data-reveal>
+            <div class="card__glow"></div>
+            <span class="card__num">04</span>
+            <h3>AI Agent Store &amp; Job Redesign Platform</h3>
+            <p>An enterprise AI enablement product covering AI-suitability scoring, Automate / Augment / Human-essential task classification, ROI and time-savings, agent mapping, semantic search, document extraction and a real-time React streaming UI.</p>
+            <ul class="chips">
+              <li>Semantic search</li><li>Document extraction</li><li>React streaming UI</li>
+            </ul>
+          </article>
+
+          <article class="card glass tilt" data-reveal>
+            <div class="card__glow"></div>
+            <span class="card__num">05</span>
+            <h3>Automated Solar Performance Reporting</h3>
+            <p>A CrewAI + Azure OpenAI reporting pipeline with deterministic number computation, JSON scaffolding, LLM-as-judge validation, FastAPI backend, nightly Kubernetes jobs, PostgreSQL storage and SendGrid delivery.</p>
+            <ul class="chips">
+              <li>CrewAI</li><li>LLM-as-judge</li><li>K8s jobs</li><li>SendGrid</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" data-palette="3">
+      <div class="container">
+        <p class="section__tag" data-reveal>03 / Technical skills</p>
+        <h2 class="section__title" data-reveal>The <span class="gradient-text">full stack</span> behind the agents.</h2>
+
+        <div class="skills">
+          <div class="skill glass" data-reveal>
+            <h3>AI / Agentic AI</h3>
+            <ul class="chips"><li>Google ADK</li><li>CrewAI</li><li>AutoGen</li><li>MCP</li><li>FastMCP</li><li>LiteLLM</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>LLMs &amp; GenAI</h3>
+            <ul class="chips"><li>Azure OpenAI</li><li>Claude</li><li>Gemini</li><li>RAG</li><li>Vector search</li><li>Semantic search</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Backend</h3>
+            <ul class="chips"><li>Python</li><li>FastAPI</li><li>async / await</li><li>gRPC</li><li>Protobuf</li><li>Pydantic</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Frontend</h3>
+            <ul class="chips"><li>React</li><li>Next.js</li><li>TypeScript</li><li>TanStack Query</li><li>Zustand</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Data &amp; Analytics</h3>
+            <ul class="chips"><li>PostgreSQL</li><li>Azure Data Explorer / KQL</li><li>Azure Synapse</li><li>Azure AI Search</li><li>amCharts</li><li>recharts</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="chips"><li>Docker</li><li>Kubernetes / AKS</li><li>Azure DevOps</li><li>ACR</li><li>Key Vault</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Security &amp; Identity</h3>
+            <ul class="chips"><li>MSAL</li><li>Azure AD</li><li>Microsoft Entra ID</li></ul>
+          </div>
+          <div class="skill glass" data-reveal>
+            <h3>Architecture &amp; Observability</h3>
+            <ul class="chips"><li>Microservices</li><li>OpenTelemetry</li><li>Application Insights</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" data-palette="4">
+      <div class="container">
+        <p class="section__tag" data-reveal>04 / Work experience</p>
+        <h2 class="section__title" data-reveal>From enterprise .NET to <span class="gradient-text">agentic AI</span>.</h2>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><span id="timelineFill"></span></div>
+
+          <article class="job glass" data-reveal>
+            <span class="job__dot"></span>
+            <p class="job__date">April 2024 – Present</p>
+            <h3>Lead Applied AI Specialist — Full-stack / AI Engineer</h3>
+            <p class="job__org">Sembcorp Utilities Pte Ltd (Sembcorp Solar) · Singapore</p>
+            <p class="job__focus">Building production GenAI, agentic AI, MCP, RAG, secure data-access and full-stack AI platforms for enterprise and renewable-energy use cases.</p>
+            <ul class="job__list">
+              <li>Built enterprise GenAI and agentic AI systems across the full AI lifecycle: LLM orchestration, planner/router agents, specialist sub-agents, RAG, long-term vector memory, MCP tool servers, deterministic validation and production observability.</li>
+              <li>Designed multi-provider model routing across Azure OpenAI, Azure AI Foundry, Google Gemini and Anthropic Claude using LiteLLM, with context-window handling and guardrails to reduce hallucination and improve reliability.</li>
+              <li>Delivered secure data and analytics agents over PostgreSQL, Azure Data Explorer/KQL, Azure Synapse, pandas and Azure AI Search, enabling natural-language access to operational, financial, document and renewable-energy datasets.</li>
+              <li>Built full-stack AI products with Python/FastAPI, async gRPC streaming, Next.js/React/TypeScript dashboards, MSAL/Azure AD SSO and PostgreSQL persistence, streaming answers, charts, dataframes, citations and tool-call progress in real time.</li>
+              <li>Containerised and deployed services on Docker and AKS with Azure Container Registry, Key Vault, Azure DevOps CI/CD, OpenTelemetry and Application Insights.</li>
+            </ul>
+            <ul class="chips chips--sm"><li>Python</li><li>FastAPI</li><li>gRPC</li><li>Google ADK</li><li>CrewAI</li><li>AutoGen</li><li>FastMCP</li><li>LiteLLM</li><li>RAG</li><li>React / Next.js</li><li>AKS</li></ul>
+          </article>
+
+          <article class="job glass" data-reveal>
+            <span class="job__dot"></span>
+            <p class="job__date">July 2023 – April 2024</p>
+            <h3>Fullstack Developer</h3>
+            <p class="job__org">U3 Infotech Pte Ltd, Singapore · Client: Sembcorp Industries Pte Ltd</p>
+            <p class="job__focus">Delivered full-stack energy-management applications, dashboards, vendor automation and token-tracking solutions.</p>
+            <ul class="job__list">
+              <li>Built real-time and historical energy dashboards (Wind, Solar, Battery, Water) using Angular 16, Chart.js and .NET Core APIs.</li>
+              <li>Designed a Vendor Invoice Management System that reduced errors and processing time by 30%, and developed a Blockchain Explorer for energy token generation, tracking and secure transactions.</li>
+              <li>Created reusable Angular Material component libraries; integrated Azure PaaS authentication and Azure DevOps CI/CD.</li>
+            </ul>
+            <ul class="chips chips--sm"><li>.NET Core 6</li><li>Angular 16</li><li>Chart.js</li><li>MSSQL</li><li>Docker</li><li>Azure DevOps</li></ul>
+          </article>
+
+          <article class="job glass" data-reveal>
+            <span class="job__dot"></span>
+            <p class="job__date">April 2022 – July 2023</p>
+            <h3>Senior Software Engineer</h3>
+            <p class="job__org">Innovatiq Technologies Pte Ltd, Singapore · Client: IRAS</p>
+            <p class="job__focus">Microservices-based solutions with emphasis on distributed systems, event-driven architecture, automated testing and Azure platform integration.</p>
+            <ul class="job__list">
+              <li>Delivered the Auto Inclusion module with complex business logic and zero defects on a minimal timeline; raised automated test coverage to 95%.</li>
+              <li>Designed APIs and Kafka event handlers; integrated Azure APIM, App Insights, Key Vault, Azure AD and AKS; mentored interns across multiple technology stacks.</li>
+            </ul>
+            <ul class="chips chips--sm"><li>.NET Core 6</li><li>Angular 14</li><li>Kafka</li><li>Kubernetes</li><li>MSSQL</li><li>XUnit</li></ul>
+          </article>
+
+          <article class="job glass" data-reveal>
+            <span class="job__dot"></span>
+            <p class="job__date">February 2020 – March 2022</p>
+            <h3>Senior Software Engineer</h3>
+            <p class="job__org">Heron Health India Pvt Ltd (CALYX AI) · Hyderabad</p>
+            <p class="job__focus">Enterprise healthcare applications, API integrations, Azure APIM onboarding and infrastructure automation for regulated healthcare platforms.</p>
+            <ul class="job__list">
+              <li>Built two client applications (Bulk Data Loader, Self-Subscription Portal) and one API on schedule; onboarded 23 APIs into APIM; released the Parexel developer portal.</li>
+              <li>Automated Azure resources via ARM templates; set up CI/CD in TeamCity and Octopus.</li>
+            </ul>
+            <ul class="chips chips--sm"><li>.NET Core</li><li>React</li><li>Next.js</li><li>Redux</li><li>ARM Templates</li><li>TeamCity</li></ul>
+          </article>
+
+          <article class="job glass" data-reveal>
+            <span class="job__dot"></span>
+            <p class="job__date">January 2017 – February 2020</p>
+            <h3>Software Engineer</h3>
+            <p class="job__org">Accenture Solutions Pvt Ltd · Hyderabad</p>
+            <p class="job__focus">.NET and Azure-based solutions across microservices migration, high-volume data processing and enterprise web applications.</p>
+            <ul class="job__list">
+              <li>Processed SSN data for 2.7M records and validated 2.4M records against USPS via Azure Web Jobs; lifted and shifted Windows services to .NET Core 2.0 on AKS.</li>
+              <li>Developed CAQH-Groups (microservices + Angular) and CAQH-Proview (ASP.NET MVC) enterprise web applications.</li>
+            </ul>
+            <ul class="chips chips--sm"><li>.NET Core 2.0</li><li>ASP.NET MVC</li><li>WCF</li><li>Azure PaaS</li><li>MongoDB</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials" data-palette="5">
+      <div class="container">
+        <p class="section__tag" data-reveal>05 / Education, certifications &amp; tools</p>
+        <h2 class="section__title" data-reveal>Foundations &amp; <span class="gradient-text">daily toolkit</span>.</h2>
+
+        <div class="cred">
+          <div class="glass cred__box" data-reveal>
+            <h3>Education</h3>
+            <ul class="cred__list">
+              <li><strong>B.E. — 2016 (74%)</strong><span>Chaitanya Bharati Institute of Technology, Osmania University, Hyderabad</span></li>
+              <li><strong>Diploma — 2012 (74%)</strong><span>Govt Institute of Electronics, SBTET, Secunderabad</span></li>
+              <li><strong>Class X — 2009 (79%)</strong><span>Ravi Teja High School, SSC, Marikal</span></li>
+            </ul>
+          </div>
+          <div class="glass cred__box" data-reveal>
+            <h3>Certifications</h3>
+            <ul class="cred__list">
+              <li><strong>AZ-900 (2020)</strong><span>Azure Fundamentals</span></li>
+              <li><strong>DP-900 (2020)</strong><span>Azure Data Fundamentals</span></li>
+              <li><strong>AI-900 (2020)</strong><span>Azure AI Fundamentals</span></li>
+            </ul>
+          </div>
+          <div class="glass cred__box" data-reveal>
+            <h3>Tools</h3>
+            <ul class="cred__list">
+              <li><strong>AI coding</strong><span>Cursor, Windsurf, Claude Code, Codex</span></li>
+              <li><strong>IDEs</strong><span>Visual Studio 2022, VS Code</span></li>
+              <li><strong>API &amp; DB</strong><span>Postman, SSMS, Robo 3T, DBeaver</span></li>
+              <li><strong>Source control</strong><span>Git, GitHub, Bitbucket</span></li>
+              <li><strong>Delivery &amp; Agile</strong><span>JIRA, TeamCity, Rally</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" data-palette="6">
+      <div class="container contact__inner">
+        <p class="section__tag" data-reveal>06 / Contact</p>
+        <h2 class="contact__title" data-reveal>Let's build something <span class="gradient-text">intelligent</span>.</h2>
+        <p class="contact__lede" data-reveal>Open to conversations about agentic AI, MCP platforms and production GenAI. Based in Singapore.</p>
+        <div class="contact__links" data-reveal>
+          <a class="btn btn--primary magnetic" href="mailto:shashikumar8782@gmail.com">shashikumar8782@gmail.com</a>
+          <a class="btn btn--ghost magnetic" href="https://www.linkedin.com/in/shashiguru-keluth-765129154" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn--ghost magnetic" href="https://github.com/shashiguru" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>&copy; <span id="year">2026</span> Shashiguru Keluth · Built with Three.js &amp; GSAP</p>
+      </footer>
+    </section>
+  </main>
+
+  <noscript>
+    <style>
+      .loader { display: none !important; }
+      body { background: #05060d; }
+    </style>
+  </noscript>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
